@@ -3,12 +3,12 @@ kind: Pod
 metadata:
   name: nginx-with-label
   labels: 
-    teams: kentang
+    team: kentang
     version: 2.0
-    environtment: production
+    environment: production
 spec:
   containers:
     - name: nginx
-      images: nginx
+      image: nginx
       ports: 
         - containerPorts: 80
