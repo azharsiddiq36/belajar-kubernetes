@@ -4,11 +4,11 @@ metadata:
   name: nginx-with-label
   labels: 
     team: kentang
-    version: 2.0
+    version: 1.2.0
     environment: production
 spec:
   containers:
     - name: nginx
       image: nginx
       ports: 
-        - containerPorts: 80
+        - containerPort: 80
