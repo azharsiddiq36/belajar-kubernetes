@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nginx-with-annotations
+  labels:
+    team: kentang
+    version: 1.23.1
+    environment: development
+  annotations:
+    description: Kentang bulat melingkar lingkar di goreng nikmat
+    resep:  jangan lupa makan kentang dengan elegan dan tetap slay
+spec:
+  containers:
+    - name: nginx
+      image: nginx
+      ports:
+        - containerPort: 80  
