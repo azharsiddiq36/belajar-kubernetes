@@ -10,6 +10,24 @@ spec:
         - containerPort: 80
       livenessProbe:
         httpGet:
+          path: /404
+          port: 80
+        initialDelaySeconds: 5
+        periodSeconds: 5
+        timeoutSeconds: 1
+        successThreshold: 1
+        failureThreshold: 3
+      readlinessProbe:
+        httpGet:
+          path: /
+          port: 80
+        initialDelaySeconds: 5 
+        periodSeconds: 5
+        timeoutSeconds: 1
+        successThreshold: 1
+        failureThreshold: 3
+      startupProbe:
+        httpGet:
           path: /
           port: 80
         initialDelaySeconds: 5
